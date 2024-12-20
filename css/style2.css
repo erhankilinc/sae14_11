@@ -161,8 +161,8 @@ header nav button:hover {
 
 /* From Uiverse.io by vamsidevendrakumar */
 .card-container {
-  margin:auto;
-  display:flex;
+  margin: auto;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 50px;
@@ -477,3 +477,92 @@ footer .social-links a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    background-color: #1e2a3a;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header ul {
+    display: none;
+    /* Hide horizontal navigation */
+  }
+
+  /* Ajustement des boutons de navigation */
+  header nav button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Layout des cartes */
+  .card-container {
+    margin: auto;
+    display: flex;
+    gap: 50px;
+  }
+
+  .card {
+    width: 400px;
+    height: 400px;
+
+    perspective: 1000px; /* Déplacer ici pour un effet 3D global sur le container */
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.899s; /* Transition du retournement */
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg); /* Effectuer la rotation au survol */
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Empêche de voir l'arrière de la carte quand elle est retournée */
+  }
+
+  .card-front {
+    background-color: #6A2C70;
+    color: #fff;
+    display: flex;
+    border: 10px solid #6A2C70;
+    border-radius: 10px;
+    font-size: 25px;
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background-color: #F08A5D;
+    color: #fff;
+    display: flex;
+    border: 10px solid #F08A5D;
+    border-radius: 10px;
+    font-size: 20px;
+    transform: rotateY(180deg); /* Positionnement initial de la carte arrière */
+  }
+
+  /* Formulaire */
+  .form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
+  }
+}

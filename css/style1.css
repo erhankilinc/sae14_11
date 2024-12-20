@@ -411,18 +411,6 @@ footer .social-links a:hover {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .left-column,
-  .right-column {
-    flex: 1 1 100%;
-  }
-}
-
 /* ---------------------------------------------------------------------- ANIMATIONS ---------------------------------------------------------------------------------------------/*
   
   /* Rebond des points (chargement) */

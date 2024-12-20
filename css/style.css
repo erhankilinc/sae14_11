@@ -144,7 +144,8 @@ header nav button:hover {
 main.text {
   padding: 60px 20px;
   text-align: center;
-  background-color: #fff;
+  background-color: #1e2a3a;
+  color: white;
 }
 
 main h1 {
@@ -153,7 +154,7 @@ main h1 {
 }
 
 main h1 span {
-  color: #f5a623;
+  color: #b6afa4;
   font-weight: bold;
 }
 
@@ -164,11 +165,11 @@ main p {
 
 main p .argument {
   font-weight: bold;
-  color: #f5a623;
+  color: #837d75;
 }
 
 main .btn {
-  background-color: #f5a623;
+  background-color: #cfcbc5;
   color: white;
   padding: 15px 30px;
   font-size: 1.2rem;
@@ -179,7 +180,7 @@ main .btn {
 }
 
 main .btn:hover {
-  background-color: #d57f1a;
+  background-color: #dbd7d2;
 }
 
 /* Quarter Circle */
@@ -419,5 +420,56 @@ footer .social-links a:hover {
 
   footer .social-links a {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  header ul li {
+    margin: 8px 0;
+  }
+
+  header nav button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  footer .social-links a {
+    font-size: 1.5rem;
   }
 }

@@ -479,3 +479,82 @@ footer .social-links a:hover {
     transform: translateY(-10px);
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  header ul li {
+    margin: 8px 0;
+  }
+
+  header nav button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  footer .social-links a {
+    font-size: 1.5rem;
+  }
+  .card-container {
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  width: 170px;
+  height: 170px;
+  perspective: 1000px;
+}
+.card-inner {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  backface-visibility: hidden;
+}
+
+}

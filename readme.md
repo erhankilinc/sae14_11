@@ -4,7 +4,7 @@
 
 Ce projet fait partie du module **SAE 14.11**, visant à développer une application web en utilisant les technologies modernes du développement web. L'objectif principal était de créer un site web interactif, responsive et fonctionnel, en appliquant les fonctionnalités appris en cours. Le projet est déployé sur GitHub Pages et est accessible via le lien suivant : 
 
-[](https://erhankilinc.github.io/sae14_11/)
+https://erhankilinc.github.io/sae14_11/
 
 ### Fonctionnalités du projet
 Le projet présente une interface web dynamique permettant aux utilisateurs de naviguer et d'interagir avec différentes sections. Il inclut des fonctionnalités telles que :

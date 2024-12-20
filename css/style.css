@@ -336,140 +336,47 @@ footer .social-links a:hover {
 
 /* AFFICHAGE SUPPORT */
 
-@media (max-width: 768px) {
+@media screen and (max-width:767px) {
+
+  /* Header */
   header {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: #1e2a3a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   header .logo {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 0rem;
+    font-weight: bold;
+    color: #f5a623;
+  }
+
+  header .logo span {
+    color: #fff;
   }
 
   header ul {
-    flex-direction: column;
-    margin-top: 15px;
+    list-style: none;
+    display: flex;
   }
 
-  header ul li {
-    margin: 8px 0;
-  }
-
-  header nav button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
-  .cards {
+  .card-container {
     flex-direction: column;
     align-items: center;
   }
 
   .card {
     width: 80%;
-    margin-bottom: 20px;
+    font-size: 5px;
   }
 
-  main h1 {
-    font-size: 28px;
-  }
-
-  main p {
-    font-size: 16px;
-  }
-
-  main .btn {
-    font-size: 16px;
-  }
-
-  footer .social-links a {
-    font-size: 20px;
-  }
-}
-
-/* Si la largeur de l'écran est inférieure ou égale à 480px (smartphone) */
-@media (max-width: 480px) {
-  header {
-    padding: 15px;
-  }
-
-  header .logo {
-    font-size: 20px;
-  }
-
-  main h1 {
-    font-size: 24px;
-  }
-
-  main p {
-    font-size: 14px;
-  }
-
-  main .btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  footer .social-links a {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-  }
-
-  header .logo {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  header ul {
-    flex-direction: column;
-    margin-top: 15px;
-  }
-
-  header ul li {
-    margin: 8px 0;
-  }
-
-  header nav button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    margin-top: 15px;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  main h1 {
-    font-size: 2rem;
-  }
-
-  main p {
-    font-size: 16px;
-  }
-
-  footer .social-links a {
-    font-size: 1.5rem;
+  .card-back {
+    font-size: 10px;
   }
 }

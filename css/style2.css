@@ -477,101 +477,7 @@ footer .social-links a:hover {
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    background-color: #1e2a3a;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header ul {
-    display: none;
-    /* Hide horizontal navigation */
-  }
-
-  /* Ajustement des boutons de navigation */
-  header nav button {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  /* Layout des cartes */
-  .card-container {
-    margin: auto;
-    display: flex;
-    gap: 50px;
-  }
-
-  .card {
-    width: 400px;
-    height: 400px;
-
-    perspective: 1000px;
-    /* Déplacer ici pour un effet 3D global sur le container */
-  }
-
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.899s;
-    /* Transition du retournement */
-  }
-
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
-    /* Effectuer la rotation au survol */
-  }
-
-  .card-front,
-  .card-back {
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    /* Empêche de voir l'arrière de la carte quand elle est retournée */
-  }
-
-  .card-front {
-    background-color: #6A2C70;
-    color: #fff;
-    display: flex;
-    border: 10px solid #6A2C70;
-    border-radius: 10px;
-    font-size: 25px;
-    transform: rotateY(0deg);
-  }
-
-  .card-back {
-    background-color: #F08A5D;
-    color: #fff;
-    display: flex;
-    border: 10px solid #F08A5D;
-    border-radius: 10px;
-    font-size: 20px;
-    transform: rotateY(180deg);
-    /* Positionnement initial de la carte arrière */
-  }
-
-  /* Formulaire */
-  .form {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .left-column,
-  .right-column {
-    flex: 1 1 100%;
-  }
-}
-
+/* Responsive Design */
 @media screen and (max-width:767px) {
 
   /* Header */
@@ -579,7 +485,7 @@ footer .social-links a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 4px;
     background-color: #1e2a3a;
     color: white;
     position: sticky;
@@ -588,7 +494,7 @@ footer .social-links a:hover {
   }
 
   header .logo {
-    font-size: 0.5rem;
+    font-size: 0rem;
     font-weight: bold;
     color: #f5a623;
   }
@@ -602,70 +508,17 @@ footer .social-links a:hover {
     display: flex;
   }
 
-  header nav button {
-    background-color: #f5a623;
-    color: white;
-    border: none;
-    padding-right: 8px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+  .card-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .card {
-    width: 200px;
-    height: 200px;
-    perspective: 1000px;
-    flex-direction: column;
-  }
-
-  .card-inner {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.999s;
-    flex-grow: 1;
-    flex-basis: 200;
-    flex-direction: column;
-  }
-
-  .card:hover .card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    flex-direction: column;
-  }
-
-  .card-front {
-    background-color: #6A2C70;
-    color: #fff;
-    display: grid;
-    align-items: center;
-    border: 10px solid #6A2C70;
-    border-radius: 10px;
-    justify-content: flex-start;
-    font-size: 0.5px;
-    transform: rotateY(0deg);
+    width: 80%;
+    font-size: 5px;
   }
 
   .card-back {
-    background-color: #F08A5D;
-    color: #fff;
-    display: grid;
-    align-items: center;
-    border: 10px solid #F08A5D;
-    border-radius: 10px;
-    justify-content: flex-start;
-    font-size: 0.2px;
-    transform: rotateY(180deg);
+    font-size: 10px;
   }
-
 }

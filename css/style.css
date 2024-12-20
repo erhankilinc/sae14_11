@@ -12,39 +12,73 @@ body {
   line-height: 1.6;
 }
 
-/* From Uiverse.io by Shoh2008 */ 
-.loader {
-  font-size: 48px;
-  display: inline-block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: #FFF;
-  letter-spacing: 2px;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.loader::after {
-  content: 'Loading';
-  position: absolute;
-  left: 0;
+#loader {
+  position: fixed;
   top: 0;
-  color: #263238;
-  text-shadow: 0 0 2px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
-  animation: animloader 6s linear infinite;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeOut 3s forwards;
+  animation-delay: 1s;
+  /* temporisation avant disparition */
+
 }
 
-@keyframes animloader {
+#loader h1 {
+  color: purple;
+  font-size: 2rem;
+}
+
+#loader h1 span {
+  display: inline-block;
+  /* nécessaire pour l'animation des points (permet l'utilisation de translateY() */
+  animation: bounce 2s infinite;
+}
+
+/* Délai pour l'animation de chaque point */
+#loader h1 span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#loader h1 span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#loader h1 span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dots {
   0% {
-    height: 100%;
+    content: ".";
+  }
+
+  33% {
+    content: "..";
+  }
+
+  66% {
+    content: "...";
+  }
+}
+
+/* Animation de disparition (loader)*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
   }
 
   100% {
-    height: 0%;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -281,25 +315,109 @@ footer .social-links a:hover {
 
 /* Rebond des points (chargement) */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-20px);
   }
+
   60% {
     transform: translateY(-10px);
   }
 }
 
-/* Animation de disparition (loader)*/
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    visibility: visible;
+/* AFFICHAGE SUPPORT */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
-  100% {
-    opacity: 0;
-    visibility: hidden;
+
+  header .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  header ul li {
+    margin: 8px 0;
+  }
+
+  header nav button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  main p {
+    font-size: 16px;
+  }
+
+  main .btn {
+    font-size: 16px;
+  }
+
+  footer .social-links a {
+    font-size: 20px;
+  }
+}
+
+/* Si la largeur de l'écran est inférieure ou égale à 480px (smartphone) */
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+  }
+
+  header .logo {
+    font-size: 20px;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  main p {
+    font-size: 14px;
+  }
+
+  main .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  footer .social-links a {
+    font-size: 18px;
   }
 }

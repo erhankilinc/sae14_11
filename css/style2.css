@@ -70,6 +70,19 @@ body {
   }
 }
 
+/* Animation de disparition (loader)*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /* Header */
 header {
   display: flex;
@@ -147,6 +160,14 @@ header nav button:hover {
 }
 
 /* From Uiverse.io by vamsidevendrakumar */
+.card-container {
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
 .card {
   width: 400px;
   height: 400px;
@@ -193,14 +214,15 @@ header nav button:hover {
   border: 10px solid #F08A5D;
   border-radius: 10px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   transform: rotateY(180deg);
 }
 
 .back {
   background-color: #1e2a3a;
 }
-body{
+
+body {
   background-color: #1e2a3a;
 }
 
@@ -282,7 +304,7 @@ footer .social-links a:hover {
   margin-bottom: 10px;
 }
 
-/* From Uiverse.io by ammarsaa */ 
+/* From Uiverse.io by ammarsaa */
 .form {
   display: flex;
   flex-direction: column;
@@ -329,7 +351,7 @@ footer .social-links a:hover {
   background-color: #00bfff;
 }
 
-.message, 
+.message,
 .signin {
   font-size: 14.5px;
   color: rgba(255, 255, 255, 0.7);
@@ -367,7 +389,7 @@ footer .social-links a:hover {
   border-radius: 10px;
 }
 
-.form label .input + span {
+.form label .input+span {
   color: rgba(255, 255, 255, 0.5);
   position: absolute;
   left: 10px;
@@ -377,13 +399,13 @@ footer .social-links a:hover {
   transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+.form label .input:placeholder-shown+span {
   top: 12.5px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.form label .input:focus+span,
+.form label .input:valid+span {
   color: #00bfff;
   top: 0px;
   font-size: 0.7em;
@@ -455,15 +477,3 @@ footer .social-links a:hover {
   }
 }
 
-/* Animation de disparition (loader)*/
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}

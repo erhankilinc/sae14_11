@@ -69,6 +69,18 @@ body {
     content: "...";
   }
 }
+/* Animation de disparition (loader)*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 /* Header */
 header {
@@ -465,18 +477,5 @@ footer .social-links a:hover {
 
   60% {
     transform: translateY(-10px);
-  }
-}
-
-/* Animation de disparition (loader)*/
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }
